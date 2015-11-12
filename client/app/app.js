@@ -1,4 +1,8 @@
-angular.module('cookedin', [])
+angular.module('cookedin', [
+  'cookedin.services',
+  'cookedin.auth',
+  'ng-route'
+])
 
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
