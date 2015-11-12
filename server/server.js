@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/cookedin');
 
 require('./config/middleware.js')(app, express);
 
-var port = 1337;
+var port = port.env || 1337;
 app.listen(port, function() {
   console.log("Listening to " + port);
 });
