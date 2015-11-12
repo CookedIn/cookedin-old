@@ -7,7 +7,10 @@ mongoose.connect('mongodb://localhost/cookedin');
 
 require('./config/middleware.js')(app, express);
 
-app.listen(1337);
+var port = 1337;
+app.listen(port, function() {
+  console.log("I'm listening at " + port);
+});
 
 module.exports = app;
 
